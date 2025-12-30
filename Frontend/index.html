@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парикмахерский салон "Стиль"</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <div class="logo">
+            <i class="fas fa-cut"></i>
+            <h1>Парикмахерский салон "Стиль"</h1>
+        </div>
+        
+        <div class="auth-box">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="login">Вход</button>
+                <button class="tab-btn" data-tab="register">Регистрация</button>
+            </div>
+            
+            <!-- Форма входа -->
+            <form id="loginForm" class="auth-form active">
+                <div class="form-group">
+                    <label for="loginEmail"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="loginEmail" placeholder="admin@admin.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword"><i class="fas fa-lock"></i> Пароль</label>
+                    <input type="password" id="loginPassword" placeholder="admin123" required>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-sign-in-alt"></i> Войти
+                </button>
+                <div class="demo-credentials">
+                    <p><strong>Демо доступ:</strong></p>
+                    <p>Админ: admin@admin.com / admin123</p>
+                    <p>Мастер Анна: anna@master.com / masterpass</p>
+                    <p>Мастер Борис: boris@master.com / masterpass</p>
+                </div>
+            </form>
+            
+            <!-- Форма регистрации -->
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="regName"><i class="fas fa-user"></i> Имя</label>
+                    <input type="text" id="regName" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="regEmail" placeholder="email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword"><i class="fas fa-lock"></i> Пароль</label>
+                    <input type="password" id="regPassword" placeholder="Пароль" required>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-user-plus"></i> Зарегистрироваться
+                </button>
+            </form>
+            
+            <div class="role-info">
+                <p>После входа система автоматически определит вашу роль:</p>
+                <ul>
+                    <li><i class="fas fa-user"></i> <strong>Клиент</strong> - запись к мастерам</li>
+                    <li><i class="fas fa-cut"></i> <strong>Мастер</strong> - просмотр своих записей</li>
+                    <li><i class="fas fa-crown"></i> <strong>Администратор</strong> - управление системой</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
